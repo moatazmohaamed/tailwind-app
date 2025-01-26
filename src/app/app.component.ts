@@ -12,8 +12,4 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'tailwind_app';
-
-  toogleMode() {
-    document.documentElement.classList.toggle('dark');
-  }
 }

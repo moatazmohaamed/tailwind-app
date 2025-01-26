@@ -1,13 +1,12 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit, viewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Collapse } from 'flowbite';
 import type { CollapseOptions, CollapseInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -38,7 +37,7 @@ export class NavbarComponent implements OnInit {
     collapse.expand();
   }
 
-  toogleMode(): boolean {
+  toogleMode() {
     return document.documentElement.classList.toggle('dark');
   }
 }
