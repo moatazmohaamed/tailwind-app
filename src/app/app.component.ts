@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { DarkmodeService } from './serivces/darkmode.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,6 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'tailwind_app';
+
+  darkModeService: DarkmodeService = inject(DarkmodeService);
 }

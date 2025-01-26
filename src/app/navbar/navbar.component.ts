@@ -1,8 +1,9 @@
-import { Component, OnInit, viewChild } from '@angular/core';
+import { Component, inject, OnInit, viewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Collapse } from 'flowbite';
 import type { CollapseOptions, CollapseInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
+import { DarkmodeService } from '../serivces/darkmode.service';
 
 @Component({
   selector: 'app-navbar',
@@ -37,7 +38,9 @@ export class NavbarComponent implements OnInit {
     collapse.expand();
   }
 
-  toogleMode() {
-    return document.documentElement.classList.toggle('dark');
+  darkModeService: DarkmodeService = inject(DarkmodeService);
+
+  toogleDarkMode() {
+    this.darkModeService.uptadeDarkMode();
   }
 }
