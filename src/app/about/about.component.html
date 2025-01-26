@@ -1,0 +1,21 @@
+<div class="vh-100 dark:bg-[#24292F]">
+  <div class="container m-auto py-7 ">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-9">
+      @for (image of imgs; track $index) {
+      <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
+        <img alt="" src="{{image}}" class="h-56 w-full object-cover" />
+
+        <div class="bg-white p-4 sm:p-6 dark:bg-gray-900">
+          <h3 class="mt-0.5 text-lg text-gray-900 dark:text-white">
+            card number {{$index + 1}}
+          </h3>
+          <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+            Item number {{$index + 1}}
+          </p>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+
+</div>
